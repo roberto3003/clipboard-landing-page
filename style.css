@@ -7,6 +7,10 @@
   --font-size: calc(1rem + 0.5vw);
 }
 
+* {
+  max-width: 100%;
+}
+
 html {
   height: 100%;
   background-image: url(./images/bg-header-desktop.png);
@@ -39,7 +43,6 @@ p {
   display: flex;
   gap: var(--padding);
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .flex-col {
@@ -60,11 +63,15 @@ section {
 }
 
 .button {
-border-radius: var(--padding);
-height: 2em;
-width: 16em;
-display: grid;
-place-items: center;
+  border-radius: var(--padding);
+  height: 2em;
+  width: 16em;
+  display: grid;
+  place-items: center;
+}
+
+.download {
+  justify-content: center;
 }
 
 .download>.button:first-child {
@@ -76,8 +83,8 @@ place-items: center;
 }
 
 a {
-color: var(--light);
-text-decoration:none;
+  color: var(--light);
+  text-decoration:none;
 }
 
 .specs {
@@ -109,4 +116,28 @@ text-decoration:none;
 
 .mobile> img {
   width: 100%;
+}
+
+.card img {
+  width: calc(var(--padding)*2);
+  height: auto;
+  margin: 0 auto calc(var(--padding)*-1);
+}
+
+.cards {
+  gap: calc(var(--padding)*2);
+}
+
+.cards > * {
+  flex-grow: 1;
+  flex-basis: calc((12em - 30%) * 999);
+}
+
+.cards > div:nth-last-child(n+ 4),
+.cards > div:nth-last-child(n+ 4) ~ * {
+  flex-basis: 100%;
+}
+
+.brands {
+  justify-content: space-around;
 }
