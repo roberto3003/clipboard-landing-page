@@ -27,6 +27,7 @@ body {
 p {
   line-height: 1.5;
   max-width: 60ch;
+  margin: 0 auto;
 }
 
 .center {
@@ -47,12 +48,31 @@ p {
 
 
 .container {
-  width: 80vw;
+/*  width: 80vw; */
   min-width: 320px;
   padding: var(--padding) 0;
   text-align: center;
 }
 
+.button {
+border-radius: var(--padding);
+height: 2em;
+width: 16em;
+display: grid;
+place-items: center;
+}
 
+.download>.button:first-child {
+  background-color: var(--medium);
+}
+
+.download>.button:last-child {
+  background-color: var(--accent);
+}
+
+a {
+color: var(--light);
+text-decoration:none;
+}
 
 
