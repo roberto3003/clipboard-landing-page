@@ -7,10 +7,6 @@
   --font-size: calc(1rem + 0.5vw);
 }
 
-* {
-  max-width: 100%;
-}
-
 html {
   height: 100%;
   background-image: url(./images/bg-header-desktop.png);
@@ -32,6 +28,16 @@ p {
   line-height: 1.5;
   max-width: 60ch;
   margin: 0 auto calc(var(--padding)*2);
+}
+
+footer {
+background-color: gainsboro;
+min-width: 100%;
+min-height: 25vh;
+}
+
+.links> *  > a {
+color: var(--dark);
 }
 
 .center {
@@ -140,4 +146,21 @@ a {
 
 .brands {
   justify-content: space-around;
+}
+
+.brands img {
+  height: calc(var(--font-size)*2);
+  width: auto;
+}
+
+.wrapper {
+  width: 90%;
+}
+
+.social {
+  margin-inline-start: auto;
+}
+
+.social img {
+  height: var(--padding);
 }
