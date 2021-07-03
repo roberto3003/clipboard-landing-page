@@ -27,7 +27,7 @@ body {
 p {
   line-height: 1.5;
   max-width: 60ch;
-  margin: 0 auto;
+  margin: 0 auto calc(var(--padding)*2);
 }
 
 .center {
@@ -48,10 +48,15 @@ p {
 
 
 .container {
-/*  width: 80vw; */
+  width: 80vw; 
   min-width: 320px;
   padding: var(--padding) 0;
   text-align: center;
+}
+
+section {
+  justify-content: space-evenly;
+  margin-block-end: calc(var(--padding)*4);
 }
 
 .button {
@@ -75,4 +80,33 @@ color: var(--light);
 text-decoration:none;
 }
 
+.specs {
+  gap: none;
+}
+.specs > * {
+  flex-grow: 1;
+  flex-basis: calc(( 30em - 100%) * 999);
+}
 
+.specs > :nth-last-child(n+ 3),
+.specs > :nth-last-child(n+ 3) ~ * {
+  flex-basis: 100%;
+}
+
+.desktop {
+  min-height: 240px;
+  background-image: url('./images/image-computer.png');
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:bottom;
+}
+
+.mobile {
+  max-width: 40vw;
+  min-width: 240px;
+  margin: 0 auto;
+}
+
+.mobile> img {
+  width: 100%;
+}
